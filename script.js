@@ -8,13 +8,13 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  //jquery selectors that select all the elements that hafe the saveBtn class
+  //jquery selectors that select all the elements that have the saveBtn class
   $(".saveBtn").on("click" , function() {
     console.log($(this))
     //when any save function is clicked run this function
     //select the text area that is next to this save button
-      // use .siblings()
     //create a variable that gets the value of the text area 
+          // use .siblings()
     //save the text input to localStorages
       // localStorage.setItem("key for the hour block we are in check the ID for the textarea" , value of what you want saved)
   } )
@@ -30,15 +30,24 @@ $(function () {
   // change the class depending on the hour
   //for loop that loops over each timeblock and runs our if/else statements
   for (var i = 9; i < 18; i++) {
-      // inside the for loop - select the one time block we are focussing on
+      // inside the for loop - select the one time block we are focusing on
       // example: the 9AM time block will be first selected
       var timeBlockEl = $("#hour-" + i)
-
-      if // if  currentHour is greater than i - use jquery methods when you add the past class to div
-
-      else if // if  currentHour is equals i - use jquery methods when you add present class to div
+      
+      // if  currentHour is greater than i - use jquery methods when you add the past class to div
+      if (currentHour > i) {
+        $(timeBlockEl).addClass("past")
+      }
+      
+      // if  currentHour is equals i - use jquery methods when you add present class to div
+      else if (currentHour == i) {
+        $(timeBlockEl).addClass("present")
+      }
     
-      else // if currentHour is less than i - use jquery methods when you add future class to the div
+      // if currentHour is less than i - use jquery methods when you add future class to the div
+      else if (currentHour < i) {
+        $(timeBlockEl).addClass("future")
+      }
 
   }
 
@@ -58,10 +67,29 @@ $(function () {
   var elevenAm = localStorage.getItem("11") //repeat this for each hour block
   $("#11").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
 
+  var elevenAm = localStorage.getItem("12") //repeat this for each hour block
+  $("#12").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
+
+  var elevenAm = localStorage.getItem("13") //repeat this for each hour block
+  $("#13").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
+
+  var elevenAm = localStorage.getItem("14") //repeat this for each hour block
+  $("#14").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
+
+  var elevenAm = localStorage.getItem("15") //repeat this for each hour block
+  $("#15").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
+
+  var elevenAm = localStorage.getItem("16") //repeat this for each hour block
+  $("#16").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
+
+  var elevenAm = localStorage.getItem("17") //repeat this for each hour block
+  $("#17").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
+
+
   // TODO: Add code to display the current date in the header of the page.
   // what is the current date - use day.js
-  var currentDate = dayjs().format("") // check day js for date format
+  var currentDate = dayjs().format("MM/DD/YYYY") // check day js for date format
   // select the element that we want to change - 
-  // change the elment's text content
+  // change the element's text content
   document.getElementById("currentDay").textContent=currentDate // convert to jquery selectors and jquery textContent
 });
