@@ -7,21 +7,21 @@
 | HTML    | [W3Schools - HTML](https://www.w3schools.com/html/html_intro.asp) | 
 | CSS     | [W3Schools - CSS](https://www.w3schools.com/css/css_intro.asp)      | 
 | JQUERY       | [About jQuery](https://jquery.com/)     |   
+| DayJS       | [About DayJS](https://day.js.org/)     | 
 | Git       | [About GitHub](https://git-scm.com/about)     |    
 
 ## Description 
 
-[View the webpage](https://chlarson74.github.io/homework-62723)
+[View the webpage](https://chlarson74.github.io/daily-planner)
 
-The project is a begining webpage portfolio to accompany the work I accomplish in the Full-Stack Developer Bootcamp. All but the first projects listed are fake projects so far. In time they will be replace with real projects. 
+The project is a dynamic daily planner webpage that will visually show the hours of the work day - past, present and future by color. The data that the user puts into the hour fields will be stored in localStorage and can be retained even through refreshing the page. 
 
 Work completed:
-- Downloaded stock images from [unsplash.com](https://unsplash.com) reduced the pixel density of the provided images to 72ppi for faster page load speed.
-- Created simple wireframes to help visualize and plan the design and code.
-- Coded the index.html file to have flex - header, nav, main, aside, section, footer elements.
-- The index.html has a header with nav links, a flexible grid of project images and a footer with nav links.
-- Created a CSS code to style the index.html and make it visually similiar to the simple wireframes.
-- One media query is used to add a background value to the aside on mobile.
+- Utilized DayJS to dynamically update the date
+- Created a time block for each work hour of the day for the user to store and retain information within.
+- Each hour block of the day will dynamically update by color. As the hours pass the future, present and past hours will have new colors.
+- I was given the HTML, CSS and an incomplete JS file. I used jQuery methodes to update the JS file. There were some IDs that I need to add to the HTML document.
+
 
 
 ## Usage 
@@ -31,14 +31,13 @@ Webpage deployed online is accessible through a web browser like Google Chrome.
 
 ## Learning Points 
 
-- Used Semantic HTML because it is important for Search Engines to fully understand each part of our webpage. They provide more context than a generic div tag.
-- Reduced the image files. Smaller image files will keep you website running fast and light. It is important to break down those 300 dpi images into 72 ppi image for the web.
-- I created and used simple wireframes to plan the design. I wrote the code based on the simple wireframes I created.
-- I experimented with flex properties and thier attributes to create a flexible grid.
-- Applied a filter property to create a greyscale version of each image with CSS. On hover the filter is removed and the color image is revealed.
-- Added a simple media query to add a change the background color of the aside to lightgrey on mobile devices. The flex properties are so effective, there is no need to change their properties for mobile.
+- I furthered my understanding of connecting the dynamic functions of javascript to element in the HTML document
+- I learned to use third-party resources to include within the JS file.
+- The DayJS third-party was helpful in bringing in more dynamic elements
+- I furthered my understanding of localStorage to retain information
+- I learned and utilzed the simplified javascript library jQuery
 
-[mobile wireframe](./images/m-wireframe.jpg) / [desktop wireframe](./images/d-wireframe.jpg)
+[sample of functionality](./demo.gif)
 
 ## Author Info
 
