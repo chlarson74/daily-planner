@@ -12,6 +12,10 @@ $(function () {
   $(".saveBtn").on("click" , function() {
     console.log($(this))
     //when any save function is clicked run this function
+    var value = $(this).siblings(".description").val()
+    var timeBlock = $(this).parent().attr("id")
+    localStorage.setItem(timeBlock, value)
+    //console.log(timeBlock, value)
     //select the text area that is next to this save button
     //create a variable that gets the value of the text area 
           // use .siblings()
@@ -19,7 +23,8 @@ $(function () {
       // localStorage.setItem("key for the hour block we are in check the ID for the textarea" , value of what you want saved)
   } )
 
-  // TODO: Add code to apply the past, present, or future class to each time
+
+  // TODONE: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
@@ -58,35 +63,35 @@ $(function () {
   // manually do something nine times -- get item from local storage - create a var to use localStorage get item
   // highlight the key of what you want like a P.O. Box --
   // retrieve things
-  var nineAm = localStorage.getItem("9") //repeat this for each hour block
+  var nineAm = localStorage.getItem("hour-9") //repeat this for each hour block
   $("#9").val(nineAm) //repeat this for each hour block needs to be jquery
 
-  var tenAm = localStorage.getItem("10") //repeat this for each hour block
+  var tenAm = localStorage.getItem("hour-10") //repeat this for each hour block
   $("#10").val(tenAm) //repeat this for each hour block needs to be jquery
 
-  var elevenAm = localStorage.getItem("11") //repeat this for each hour block
+  var elevenAm = localStorage.getItem("hour-11") //repeat this for each hour block
   $("#11").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
 
-  var elevenAm = localStorage.getItem("12") //repeat this for each hour block
+  var elevenAm = localStorage.getItem("hour-12") //repeat this for each hour block
   $("#12").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
 
-  var elevenAm = localStorage.getItem("13") //repeat this for each hour block
+  var elevenAm = localStorage.getItem("hour-13") //repeat this for each hour block
   $("#13").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
 
-  var elevenAm = localStorage.getItem("14") //repeat this for each hour block
+  var elevenAm = localStorage.getItem("hour-14") //repeat this for each hour block
   $("#14").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
 
-  var elevenAm = localStorage.getItem("15") //repeat this for each hour block
+  var elevenAm = localStorage.getItem("hour-15") //repeat this for each hour block
   $("#15").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
 
-  var elevenAm = localStorage.getItem("16") //repeat this for each hour block
+  var elevenAm = localStorage.getItem("hour-16") //repeat this for each hour block
   $("#16").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
 
-  var elevenAm = localStorage.getItem("17") //repeat this for each hour block
+  var elevenAm = localStorage.getItem("hour-17") //repeat this for each hour block
   $("#17").val(elevenAm) //repeat this for each hour block needs to be jquery / $ is taking the place of document.getElementById
 
 
-  // TODO: Add code to display the current date in the header of the page.
+  // TODONE: Add code to display the current date in the header of the page.
   // what is the current date - use day.js
   var currentDate = dayjs().format("MM/DD/YYYY") // check day js for date format
   // select the element that we want to change - 
